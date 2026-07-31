@@ -10,12 +10,10 @@
 
 이 프로젝트는 일반적인 React Router SPA가 아니라 React 19, Vite 8, vinext의 App Router 구조를 사용합니다.
 
-`npm run build`는 다음 두 결과를 만듭니다.
+`next.config.ts`의 `output: "export"` 설정으로 `npm run build`가
+`dist/client/`에 Render Static Site용 HTML과 브라우저 자산을 생성합니다.
 
-1. `dist/`: vinext 서버·클라이언트 빌드
-2. `out/`: Render Static Site용 HTML 정적 export
-
-Render에서는 반드시 `out`을 Publish Directory로 사용해야 합니다.
+Render에서는 반드시 `dist/client`를 Publish Directory로 사용해야 합니다.
 
 ## 로컬 실행
 
@@ -38,7 +36,7 @@ npm install
 npm run build
 ```
 
-빌드 과정에서 `/`, `/about`, `/privacy`, `/terms`, `/contact`, `/store-supplies`를 `out/`에 정적 HTML로 생성하고 내부 링크를 검사합니다.
+빌드 과정에서 `/`, `/about`, `/privacy`, `/terms`, `/contact`, `/store-supplies`를 `dist/client/`에 정적 HTML로 생성합니다.
 
 ## Render Static Site 배포
 
@@ -46,7 +44,7 @@ npm run build
 
 - Service type: Static Site (`type: web`, `runtime: static`)
 - Build Command: `npm install && npm run build`
-- Publish Directory: `out`
+- Publish Directory: `dist/client`
 - Node version: `.node-version`의 `22.13.0`
 - 대표 도메인: `iceinsoo.kr`
 
@@ -58,7 +56,7 @@ npm run build
 2. New → Static Site를 선택합니다.
 3. 배포 브랜치를 `main`으로 설정합니다.
 4. Build Command에 `npm install && npm run build`를 입력합니다.
-5. Publish Directory에 `out`을 입력합니다.
+5. Publish Directory에 `dist/client`를 입력합니다.
 6. 배포가 성공하면 Custom Domains에서 `iceinsoo.kr`을 추가합니다.
 
 ## DNS 연결
@@ -95,4 +93,4 @@ git push -u origin main
 - 검색엔진 크롤링: `public/robots.txt`, `public/sitemap.xml`
 
 진단 입력값과 계산 결과는 서버에 저장하지 않습니다. 환경변수와 비밀키는 `.gitignore`에 포함되며 프런트엔드 코드에 비밀 API 키를 넣으면 안 됩니다.
-
+
