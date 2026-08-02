@@ -17,7 +17,7 @@ export function Calculator({onCalculated,isSaving}:{onCalculated:(input:Diagnosi
     <div className="level-grid"><LevelField label="아이스크림 재고관리 수준" value={input.inventoryLevel} onChange={v=>setValue("inventoryLevel",v)}/><LevelField label="직접 발주 상품 수준" value={input.directOrderLevel} onChange={v=>setValue("directOrderLevel",v)}/></div>
     <button className="advanced-toggle" type="button" onClick={()=>setAdvanced(!advanced)} aria-expanded={advanced}><span>⚙ 계산 기본값 <small>수수료·전기료·기타 운영비</small></span><b>{advanced?"−":"+"}</b></button>
     {advanced&&<div className="advanced-panel"><NumberField name="cardFeeRate" label="카드수수료율" unit="%" hint="기본 2.5%" value={input.cardFeeRate} onChange={setValue}/><NumberField name="electricityCost" label="전기료" unit="만원" hint="기본 20만원" value={input.electricityCost} onChange={setValue}/><NumberField name="otherCost" label="기타 운영비" unit="만원" hint="기본 10만원" value={input.otherCost} onChange={setValue}/></div>}
-    <button className="primary-button lab-button" type="button" disabled={isSaving} onClick={()=>onCalculated(input,calculatorService.calculate(input))}>{isSaving?"진단 중…":"창업 진단 결과 확인하기"}<span>→</span></button>
+    <button className="primary-button lab-button" type="button" aria-label="무료 인수 진단 결과 확인하기" disabled={isSaving} onClick={()=>onCalculated(input,calculatorService.calculate(input))}>{isSaving?"진단 중…":"무료 인수 진단 결과 확인하기"}<span>→</span></button>
     <p className="fine-print">입력한 정보와 계산 결과는 서버에 저장되지 않습니다.</p>
   </section>;
 }
