@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: siteConfig.seo.title, template: "%s" },
   description: siteConfig.seo.description,
+  alternates: { canonical: "/" },
   icons: { icon: "/favicon.svg" },
   openGraph: { type:"website",locale:"ko_KR",siteName:siteConfig.brandName,title:siteConfig.seo.title,description:siteConfig.seo.description,url:SITE_URL,images:[{url:siteConfig.seo.ogImage,width:1731,height:909,alt:"무인아이스크림 인수 계산기"}] },
   twitter: { card:"summary_large_image",title:siteConfig.seo.title,description:siteConfig.seo.description,images:[siteConfig.seo.ogImage] },
@@ -24,4 +25,3 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   };
   return <html lang="ko"><body>{children}<KakaoFloatingButton/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(structuredData)}}/></body></html>;
 }
-
