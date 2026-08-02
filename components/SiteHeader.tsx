@@ -67,8 +67,8 @@ export function SiteHeader() {
     event.preventDefault();
     closeMenu();
     requestAnimationFrame(() => {
-      scrollToHash(url.hash);
       if (window.location.hash !== url.hash) window.history.pushState(null, "", url.hash);
+      scrollToHash(url.hash);
     });
   };
 
