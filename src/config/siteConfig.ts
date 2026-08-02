@@ -1,6 +1,8 @@
 import {
   BRAND_NAME,
   CHECKLIST_URL,
+  CHECKLIST_DOWNLOAD_URL,
+  CHECKLIST_PAGE_URL,
   OG_IMAGE,
   SEO_DESCRIPTION,
   SEO_TITLE,
@@ -15,7 +17,8 @@ export const siteConfig = {
   kakaoChannelUrl: "https://pf.kakao.com/_SdtxnX",
   kakaoChannelName: "무인아이스크림 인수연구소",
   checklistUrl: CHECKLIST_URL,
-  checklistPath: "/checklist",
+  checklistPath: CHECKLIST_PAGE_URL,
+  checklistDownloadUrl: CHECKLIST_DOWNLOAD_URL,
   showKakaoFloatingButton: false,
   showDiagnosisCount: false,
   seo: {
