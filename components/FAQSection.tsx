@@ -3,12 +3,12 @@
 import { useMemo, useState } from "react";
 import { faqItems } from "../src/data/faq";
 
-type Filter = "all" | "service" | "startup";
+type Filter = "all" | "service" | "acquisition";
 
 const filters: { value: Filter; label: string }[] = [
   { value: "all", label: "전체" },
   { value: "service", label: "서비스" },
-  { value: "startup", label: "창업" },
+  { value: "acquisition", label: "인수" },
 ];
 
 export function FAQSection() {
@@ -36,7 +36,7 @@ export function FAQSection() {
         <span>04</span>
         <div>
           <h2>자주 묻는 질문</h2>
-          <p>서비스 이용과 무인아이스크림 창업 정보를 빠르게 찾아보세요.</p>
+          <p>기존 무인아이스크림 매장의 인수 검토 기준을 빠르게 찾아보세요.</p>
         </div>
       </div>
 
@@ -82,7 +82,7 @@ export function FAQSection() {
                 aria-controls={`answer-${item.id}`}
                 onClick={() => setOpenId(isOpen ? null : item.id)}
               >
-                <span className={`faq-category ${item.category}`}>{item.category === "service" ? "서비스" : "창업"}</span>
+                <span className={`faq-category ${item.category}`}>{item.category === "service" ? "서비스" : "인수"}</span>
                 <strong>{item.question}</strong>
                 <i aria-hidden="true">{isOpen ? "−" : "+"}</i>
               </button>
