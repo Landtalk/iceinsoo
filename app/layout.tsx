@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./acquisition.css";
+import "./scroll.css";
 import { BRAND_NAME, OG_DESCRIPTION, OG_IMAGE, SEO_DESCRIPTION, SEO_TITLE, SITE_URL } from "../lib/constants";
 import { KakaoFloatingButton } from "../src/components/KakaoChannelButton";
 
