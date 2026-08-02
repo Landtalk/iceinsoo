@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./acquisition.css";
-import { SITE_URL } from "../lib/constants";
+import { BRAND_NAME, OG_IMAGE, SEO_DESCRIPTION, SEO_TITLE, SITE_URL } from "../lib/constants";
 import { KakaoFloatingButton } from "../src/components/KakaoChannelButton";
-import { siteConfig } from "../src/config/siteConfig";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: siteConfig.seo.title, template: "%s" },
-  description: siteConfig.seo.description,
+  title: { default: SEO_TITLE, template: "%s" },
+  description: SEO_DESCRIPTION,
   alternates: { canonical: "/" },
   icons: { icon: "/favicon.svg" },
-  openGraph: { type:"website",locale:"ko_KR",siteName:siteConfig.brandName,title:siteConfig.seo.title,description:siteConfig.seo.description,url:SITE_URL,images:[{url:siteConfig.seo.ogImage,width:1731,height:909,alt:"무인아이스크림 인수 계산기"}] },
-  twitter: { card:"summary_large_image",title:siteConfig.seo.title,description:siteConfig.seo.description,images:[siteConfig.seo.ogImage] },
+  openGraph: { type:"website",locale:"ko_KR",siteName:BRAND_NAME,title:SEO_TITLE,description:SEO_DESCRIPTION,url:SITE_URL,images:[{url:OG_IMAGE,width:1731,height:909,alt:"무인아이스크림 인수 계산기"}] },
+  twitter: { card:"summary_large_image",title:SEO_TITLE,description:SEO_DESCRIPTION,images:[OG_IMAGE] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
