@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: SEO_DESCRIPTION,
   alternates: { canonical: "/" },
   icons: { icon: "/favicon.svg" },
+  other: { "naver-site-verification": "22e7cbaf3fb688cc70e13905379d672ec2d5e28d" },
   openGraph: { type:"website",locale:"ko_KR",siteName:BRAND_NAME,title:SEO_TITLE,description:SEO_DESCRIPTION,url:SITE_URL,images:[{url:OG_IMAGE,width:1731,height:909,alt:"무인아이스크림 인수 계산기"}] },
   twitter: { card:"summary_large_image",title:SEO_TITLE,description:SEO_DESCRIPTION,images:[OG_IMAGE] },
 };
