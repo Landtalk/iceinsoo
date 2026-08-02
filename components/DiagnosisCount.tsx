@@ -12,8 +12,8 @@ export function DiagnosisCount() {
   }, []);
 
   if (!SHOW_DIAGNOSIS_COUNT || count === null) return null;
-  return <p className="diagnosis-count" aria-label={`누적 창업진단 완료 ${count.toLocaleString("ko-KR")}건`}>
-    누적 창업진단 완료 <strong>{count.toLocaleString("ko-KR")}건</strong>
+  return <p className="diagnosis-count" aria-label={`누적 인수진단 완료 ${count.toLocaleString("ko-KR")}건`}>
+    누적 인수진단 완료 <strong>{count.toLocaleString("ko-KR")}건</strong>
   </p>;
 }
 
