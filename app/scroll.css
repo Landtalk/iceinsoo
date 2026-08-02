@@ -1,4 +1,5 @@
 html {
+  scroll-behavior: auto;
   overflow-y: auto;
 }
 
