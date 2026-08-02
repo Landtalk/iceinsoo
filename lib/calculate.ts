@@ -68,7 +68,7 @@ export function calculateDiagnosis(input: DiagnosisInput): DiagnosisResult {
   let diagnosis = "신중한 검토가 필요해요";
   let summary = "수익과 투자 조건을 조금 더 다듬으면 더 안전한 선택이 될 수 있어요.";
   let recommendedAction = "월세와 권리금 협상 여지를 먼저 확인하세요";
-  if (totalScore >= 80) { diagnosis = "창업 적합도가 높아요"; summary = "수익성과 운영 조건의 균형이 좋아 구체적인 현장 검증을 시작해볼 만해요."; recommendedAction = "상권의 시간대별 유동인구와 실제 매출을 검증하세요"; }
+  if (totalScore >= 80) { diagnosis = "인수 적합도가 높아요"; summary = "수익성과 운영 조건의 균형이 좋아 구체적인 매물 검증을 시작해볼 만해요."; recommendedAction = "시간대별 매출과 실제 운영자료를 검증하세요"; }
   else if (totalScore >= 65) { diagnosis = "긍정적으로 검토해볼 만해요"; summary = "몇 가지 위험요소만 확인한다면 안정적인 운영을 기대할 수 있어요."; recommendedAction = "보수적 매출 시나리오로 한 번 더 계산해보세요"; }
   else if (totalScore < 45) { diagnosis = "현재 조건은 위험도가 높아요"; summary = "비용 구조나 투자금 조건을 바꾸지 않으면 회수 기간이 길어질 수 있어요."; recommendedAction = "계약 전 매출·임대료·권리금 조건을 재협상하세요"; }
 
