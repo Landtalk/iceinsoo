@@ -5,10 +5,11 @@ import { BRAND_NAME, SMART_STORE_EBOOK_URL } from "../lib/constants";
 
 const items = [
   ["홈", "/#top"],
-  ["창업 진단", "/#diagnosis"],
-  ["판단 기준", "/#criteria"],
+  ["무료 인수 진단", "/#diagnosis"],
+  ["인수 판단 기준", "/#criteria"],
   ["운영 가이드", "/#guide"],
   ["운영용품", "/store-supplies"],
+  ["인수 체크리스트", "/checklist"],
   ["전자책", "/#ebook"],
 ] as const;
 
