@@ -1,14 +1,11 @@
-import { BRAND_NAME, SMART_STORE_EBOOK_URL } from "../lib/constants";
-import { KakaoChannelButton } from "../src/components/KakaoChannelButton";
+import { BRAND_NAME } from "../lib/constants";
 
 export function SiteFooter() {
   return <footer>
     <div className="footer-inner">
-      <div><div className="brand"><span>🍦</span>{BRAND_NAME}</div><p>운영 중 매장의 인수 조건을 숫자와 실제 자료로 검토합니다.</p></div>
-      <div className="footer-links">
-        <a href="/about">서비스 소개</a><a href="/checklist">인수 체크리스트</a><a href="/terms">이용약관 및 면책 안내</a><a href="/privacy">개인정보처리방침</a><a href="/contact">문의하기</a><KakaoChannelButton variant="outline" label="카카오톡 채널" location="footer"/><a href={SMART_STORE_EBOOK_URL} target="_blank" rel="noopener noreferrer" aria-label="무인 창업 전자책 보기, 새 탭에서 열림">전자책 보기 ↗</a>
-      </div>
+      <div className="footer-brand"><div className="brand"><span>🍦</span>{BRAND_NAME}</div><p>운영 중인 매장의 인수 조건을 숫자와 실제 자료로 검토합니다.</p></div>
+      <nav className="footer-links" aria-label="푸터 메뉴"><a href="/about">회사소개</a><a href="/about#business-info">사업자정보</a><a href="/terms">이용약관</a><a href="/privacy">개인정보처리방침</a><a href="/contact">문의하기</a></nav>
     </div>
+    <div className="footer-business" aria-label="사업자 정보"><span><b>운영</b> 주식회사 하이델베르크2018</span><span><b>대표</b> 김양언</span><span><b>사업자등록번호</b> 469-81-02996</span><span><b>이메일</b> <a href="mailto:landtalk2025@gmail.com">landtalk2025@gmail.com</a></span></div>
   </footer>;
 }
-
