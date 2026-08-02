@@ -1,0 +1,17 @@
+html {
+  overflow-y: auto;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#top,
+#diagnosis,
+#criteria,
+#guide,
+#result,
+#faq {
+  scroll-margin-top: 88px;
+}
