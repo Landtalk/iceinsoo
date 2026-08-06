@@ -8,6 +8,7 @@ const items = [
   ["무료 인수 진단", "/#diagnosis"],
   ["인수 판단 기준", "/#criteria"],
   ["운영 가이드", "/#guide"],
+  ["운영 노하우", "/guide"],
   ["운영용품", "/store-supplies"],
   ["인수 체크리스트", "/checklist"],
 ] as const;
