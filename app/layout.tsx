@@ -4,6 +4,7 @@ import "./acquisition.css";
 import "./scroll.css";
 import "./about.css";
 import "./footer.css";
+import "./guide.css";
 import { BRAND_NAME, OG_DESCRIPTION, OG_IMAGE, SEO_DESCRIPTION, SEO_TITLE, SITE_URL } from "../lib/constants";
 import { KakaoFloatingButton } from "../src/components/KakaoChannelButton";
 
