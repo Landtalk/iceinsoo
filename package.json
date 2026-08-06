@@ -9,7 +9,7 @@
     "dev": "vinext dev",
     "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
     "prepare:checklist": "node scripts/prepare-checklist-pdf.mjs",
-    "build": "npm run clean && npm run prepare:checklist && vinext build",
+    "build": "npm run clean && npm run prepare:checklist && vinext build && node scripts/inject-adsense.mjs",
     "start": "vinext start",
     "test": "npm run build",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
